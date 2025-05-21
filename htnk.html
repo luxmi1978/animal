@@ -1,0 +1,772 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Success Animal Healthcare Limited</title>
+<meta name="description" content="Empowering Livestock Health Worldwide - Manufacturer & Exporter of High-Quality Animal Healthcare Products" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet" />
+<style>
+  /* Reset and base styles */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #3a3a3a;
+    background-color: #fefbf7;
+    line-height: 1.6;
+  }
+  a {
+    color: #2e7d32;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover,
+  a:focus {
+    color: #1b4d23;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  h1, h2, h3, h4 {
+    margin-top: 0;
+    font-weight: 600;
+    color: #2e7d32;
+  }
+
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Sticky Navbar */
+  header {
+    position: sticky;
+    top: 0;
+    background-color: #f7f3eb;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  nav .logo {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #4e342e;
+    letter-spacing: 1.2px;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.6rem;
+    padding-left: 0;
+    margin: 0;
+  }
+  nav ul li a {
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.35rem 0.5rem;
+  }
+  nav ul li a.active, nav ul li a:hover, nav ul li a:focus {
+    color: #1b4d23;
+    border-bottom: 2px solid #1b4d23;
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80') center center/cover no-repeat;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    color: #faf9f5;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    padding: 2rem 1rem;
+  }
+  .hero .hero-content {
+    max-width: 600px;
+    background-color: rgba(46,125,50,0.75);
+    padding: 2rem 2.5rem;
+    border-radius: 6px;
+    box-shadow: 0 8px 14px rgb(46 125 50 / 0.6);
+    margin: auto;
+  }
+  .hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    font-weight: 300;
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero .btn-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .btn {
+    background-color: #a67c52;
+    color: #faf9f5;
+    border: none;
+    padding: 0.75rem 1.6rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgb(166 124 82 / 0.5);
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  .btn:hover, .btn:focus {
+    background-color: #4e342e;
+    outline: none;
+  }
+
+  /* Quick category highlight */
+  .quick-categories {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.6rem;
+  }
+  .category-card {
+    background-color: #faf9f5;
+    border: 1.5px solid #d7cbb8;
+    border-radius: 12px;
+    padding: 1.6rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgb(166 124 82 / 0.15);
+    transition: box-shadow 0.3s ease;
+  }
+  .category-card:hover, .category-card:focus-within {
+    box-shadow: 0 6px 16px rgb(46 125 50 / 0.4);
+  }
+  .category-icon {
+    font-size: 2.8rem;
+    color: #4e342e;
+    margin-bottom: 1rem;
+  }
+  .category-label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #2e7d32;
+  }
+
+  /* Section Titles */
+  section h2.section-title {
+    font-size: 2.2rem;
+    border-bottom: 3px solid #a67c52;
+    display: inline-block;
+    margin-bottom: 1.6rem;
+  }
+
+  /* About Us */
+  #about-us p {
+    margin-bottom: 1rem;
+    max-width: 900px;
+  }
+  #about-us .milestones {
+    margin-top: 1.5rem;
+    padding-left: 20px;
+    color: #4e342e;
+  }
+  #about-us .milestones li {
+    margin-bottom: 0.7rem;
+    font-weight: 500;
+  }
+
+  /* Products */
+  #products .categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  .product-category {
+    border: 1.5px solid #a67c52;
+    border-radius: 14px;
+    padding: 1.6rem 1.4rem 2rem;
+    background: #faf9f5;
+    box-shadow: 0 3px 10px rgb(166 124 82 / 0.15);
+    transition: box-shadow 0.3s ease;
+  }
+  .product-category:hover {
+    box-shadow: 0 9px 22px rgb(46 125 50 / 0.35);
+  }
+  .product-category h3 {
+    margin-bottom: 1.2rem;
+    color: #4e342e;
+  }
+  .product-item {
+    margin-bottom: 1.3rem;
+  }
+  .product-item h4 {
+    margin: 0 0 0.3rem;
+    font-weight: 700;
+    color: #2e7d32;
+  }
+  .product-item p {
+    margin: 0 0 0.2rem;
+    font-size: 0.92rem;
+    color: #555;
+  }
+  .product-item .key-benefits {
+    font-style: italic;
+    color: #4e342e;
+  }
+  .product-item .package-info {
+    font-size: 0.85rem;
+    color: #6b4c35;
+  }
+
+  /* Why Choose Us */
+  #why-us ul {
+    list-style-type: disc;
+    color: #4e342e;
+    max-width: 750px;
+    padding-left: 20px;
+  }
+  #why-us ul li {
+    margin-bottom: 1rem;
+  }
+
+  /* Export section */
+  #export ul {
+    list-style-type: square;
+    max-width: 700px;
+    padding-left: 20px;
+    color: #4e342e;
+  }
+  #export ul li {
+    margin-bottom: 0.9rem;
+  }
+
+  /* Blog / Insights section (optional) */
+  #blog {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+  }
+  #blog article {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(166 124 82 / 0.2);
+    padding: 1.4rem 1.8rem;
+    margin-bottom: 2rem;
+    transition: box-shadow 0.3s ease;
+  }
+  #blog article:hover {
+    box-shadow: 0 10px 26px rgb(46 125 50 / 0.38);
+  }
+  #blog article h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #4e342e;
+  }
+  #blog article p {
+    margin: 0;
+    color: #555;
+  }
+
+  /* Contact Section */
+  #contact .contact-info {
+    max-width: 500px;
+    background-color: #faf9f5;
+    padding: 1.8rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgb(166 124 82 / 0.2);
+    margin-bottom: 2rem;
+  }
+  #contact .contact-info h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #4e342e;
+  }
+  #contact .contact-info p {
+    margin: 0.4rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  /* Google Map embed */
+  #map {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 14px rgb(46 125 50 / 0.3);
+    height: 320px;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #4e342e;
+    color: #faf9f5;
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+
+  /* Floating WhatsApp Button */
+  #whatsapp-button {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    background-color: #25d366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    z-index: 1500;
+  }
+  #whatsapp-button:hover {
+    box-shadow: 0 8px 24px rgb(0 0 0 / 0.3);
+  }
+  #whatsapp-button svg {
+    fill: white;
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Responsive */
+  @media (max-width:768px) {
+    .hero {
+      min-height: auto;
+      padding: 3rem 1.5rem 4rem;
+      text-align: center;
+      justify-content: center;
+    }
+    .hero .hero-content {
+      margin: 0 auto;
+      padding: 1.8rem 1.8rem 2.2rem;
+      max-width: 90%;
+    }
+    nav ul {
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .quick-categories {
+      grid-template-columns: repeat(auto-fit,minmax(130px,1fr));
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width:425px) {
+    .btn-group {
+      flex-direction: column;
+    }
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="container" aria-label="Primary Navigation">
+    <div class="logo" tabindex="0">Success Animal Healthcare Ltd.</div>
+    <ul role="menubar">
+      <li><a href="#home" class="active" role="menuitem" tabindex="0">Home</a></li>
+      <li><a href="#about-us" role="menuitem" tabindex="0">About Us</a></li>
+      <li><a href="#products" role="menuitem" tabindex="0">Our Products</a></li>
+      <li><a href="#why-us" role="menuitem" tabindex="0">Why Choose Us</a></li>
+      <li><a href="#export" role="menuitem" tabindex="0">Export & Global Reach</a></li>
+      <li><a href="#blog" role="menuitem" tabindex="0">Insights</a></li>
+      <li><a href="#contact" role="menuitem" tabindex="0">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- Home Section -->
+<section id="home" class="hero" role="region" aria-label="Homepage Hero Section" style="background-color: #1a1a1a; padding: 2rem;">
+  <div class="hero-content" style="max-width: 800px; margin: auto; text-align: center;">
+    <h1 tabindex="0" style="font-size: 2.5rem; color: #ffffff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); margin-bottom: 1rem;">
+      Empowering Livestock Health Worldwide
+    </h1>
+    <p tabindex="0" style="font-size: 1.2rem; color: #ffffff; line-height: 1.5; margin-bottom: 2rem;">
+      Success Animal Healthcare Limited is a trusted manufacturer and global exporter of top-quality animal healthcare products based in Bangladesh. Enhancing livestock health for a better tomorrow.
+    </p>
+    <div class="btn-group" style="margin-bottom: 2rem;">
+      <a href="#products" class="btn" role="button" tabindex="0" style="background-color: #2980b9; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; margin-right: 1rem;">View Products</a>
+      <a href="#contact" class="btn" role="button" tabindex="0" style="background-color: #27ae60; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none;">Become a Distributor</a>
+    </div>
+    <div style="margin-top: 1.8rem; font-weight: 600; font-size: 1rem; color: #ffffff;">
+      <div>📞 01684-154766</div>
+      <div>✉️ <a href="mailto:successgroupltd2022@gmail.com" aria-label="Send Email to Success Animal Healthcare" style="color: #ffffff; text-decoration: underline;">successgroupltd2022@gmail.com</a></div>
+    </div>
+    <div class="quick-categories" aria-label="Quick product category highlights" style="display: flex; justify-content: center; gap: 1rem; margin-top: 2rem;">
+      <div class="category-card" tabindex="0" style="background: #333; color: white; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); cursor: default;">
+        <div class="category-icon" aria-hidden="true" style="font-size: 2rem;">🌿</div>
+        <div class="category-label" style="margin-top: 0.5rem; font-weight: 600;">Feed Supplements</div>
+      </div>
+      <div class="category-card" tabindex="0" style="background: #333; color: white; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); cursor: default;">
+        <div class="category-icon" aria-hidden="true" style="font-size: 2rem;">💉</div>
+        <div class="category-label" style="margin-top: 0.5rem; font-weight: 600;">Injections</div>
+      </div>
+      <div class="category-card" tabindex="0" style="background: #333; color: white; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); cursor: default;">
+        <div class="category-icon" aria-hidden="true" style="font-size: 2rem;">🧴</div>
+        <div class="category-label" style="margin-top: 0.5rem; font-weight: 600;">Disinfectants</div>
+      </div>
+      <div class="category-card" tabindex="0" style="background: #333; color: white; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); cursor: default;">
+        <div class="category-icon" aria-hidden="true" style="font-size: 2rem;">🐛</div>
+        <div class="category-label" style="margin-top: 0.5rem; font-weight: 600;">Dewormers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- About Us Section -->
+  <section id="about-us" class="container" role="region" aria-labelledby="aboutus-title" tabindex="-1" style="padding-top:3rem; padding-bottom:3rem;">
+    <h2 id="aboutus-title" class="section-title">About Us</h2>
+    <p>
+      Success Animal Healthcare Limited was founded with a commitment to enhancing livestock health through innovative, high-quality products. Based in Barkamta Dey Bari, Chandina-3510, Debidwar, Cumilla, Bangladesh, we proudly serve local and global markets with dedication to excellence.
+    </p>
+    <p>
+      Livestock farming plays a vital role in Bangladesh’s agricultural economy, contributing significantly to livelihoods and food security. We are devoted to supporting this essential sector by delivering reliable, effective animal healthcare solutions.
+    </p>
+    <p>
+      Our focus on quality assurance, cutting-edge research and development, and a strong international presence underpin our promise to empowering growth and health in the livestock industry worldwide.
+    </p>
+    <ul class="milestones" aria-label="Key milestones">
+      <li><strong>2022:</strong> Company establishment and launch.</li>
+      <li><strong>2023:</strong> Expansion into export markets.</li>
+      <li><strong>Present:</strong> Trusted supplier to farmers and distributors worldwide.</li>
+    </ul>
+  </section>
+
+ <!-- Our Products Section -->
+<section id="products" class="container" role="region" aria-labelledby="products-title" tabindex="-1" style="padding-bottom:3rem;">
+    <h2 id="products-title" class="section-title">Our Products</h2>
+    <div class="categories" aria-live="polite">
+
+        <article class="product-category" tabindex="0" aria-label="Zinc-S Category">
+            <h3>Zinc-S – Liquid Feed Supplement</h3>
+            <img src="C:\Users\DELL\Desktop\New folder\12.jpg" alt="Zinc-S Liquid Feed Supplement" style="max-width: 100%; height: auto;">
+            <p>For Cattle, Poultry, and Goats</p>
+            <p><strong>Description:</strong> Zinc-S is a premium liquid feed supplement designed for livestock and poultry. It provides essential Zinc to support immune function, improve metabolism, and boost reproductive and overall health in animals.</p>
+            <ul class="key-benefits">
+                <li>Strengthens immunity and reduces stress from heat and disease</li>
+                <li>Enhances digestion and nutrient absorption</li>
+                <li>Improves milk yield and overall growth</li>
+                <li>Suitable for cattle, goats, sheep, and poultry</li>
+            </ul>
+            <p><strong>Available Sizes:</strong> 100 ml, 500 ml, 1 Litre, 3 Litre, 5 Litre</p>
+            <p><strong>Usage:</strong> For veterinary use only</p>
+        </article>
+
+        <article class="product-category" tabindex="0" aria-label="Fresh Milk Tonic Category">
+            <h3>Fresh Milk Tonic – Animal Feed Premix</h3>
+            <img src="C:\Users\DELL\Desktop\New folder\13.jpg" alt="Fresh Milk Tonic" style="max-width: 100%; height: auto;">
+            <p><strong>Description:</strong> Fresh Milk Tonic is a specially formulated feed premix to enhance milk production and overall health in dairy animals. Fortified with essential vitamins, minerals, and trace elements, it helps optimize milk quality and animal performance.</p>
+            <p><strong>Each 100g Contains (Approx):</strong></p>
+            <ul>
+                <li>Vitamins A, D3, E, B12</li>
+                <li>Minerals like Copper Sulphate, Zinc Sulphate, Manganese Sulphate</li>
+                <li>DCP (Dicalcium Phosphate), Salt, and more</li>
+            </ul>
+            <ul class="key-benefits">
+                <li>Improves milk quantity and quality</li>
+                <li>Strengthens bones and overall health</li>
+                <li>Promotes better digestion and fertility</li>
+            </ul>
+            <p><strong>Weight:</strong> 1 Kg</p>
+            <p><strong>Usage:</strong> For veterinary use only</p>
+        </article>
+
+        <article class="product-category" tabindex="0" aria-label="Q-max DB Category">
+            <h3>Q-max DB – Animal Powder Feed Supplement</h3>
+            <img src="C:\Users\DELL\Desktop\New folder\14.jpg" alt="Q-max DB" style="max-width: 100%; height: auto;">
+            <p><strong>Description:</strong> Q-max DB is a powerful blend of Yeast, Prebiotics, Probiotics, Protein, Vitamins, Minerals, and Amino Acids – crafted to support digestion, boost immunity, and improve productivity in livestock.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Yeast, Prebiotics & Probiotics</li>
+                <li>Protein for muscle growth</li>
+                <li>Vital Vitamins & Minerals</li>
+                <li>Amino Acids for overall development</li>
+            </ul>
+            <p><strong>Each 100g Contains:</strong></p>
+            <ul>
+                <li>Lysine, Methionine, Calcium, Phosphorus</li>
+                <li>Live Yeast Culture, Prebiotics, Probiotics</li>
+                <li>Copper, Zinc, Iron, Manganese, Selenium</li>
+                <li>Vitamin A, D3, E, B-complex</li>
+            </ul>
+            <p><strong>Weight:</strong> 1 Kg</p>
+            <p><strong>Usage:</strong> For veterinary use only</p>
+        </article>
+
+        <article class="product-category" tabindex="0" aria-label="Buta Plus Category">
+            <h3>Buta Plus – Growth Fighter</h3>
+            <img src="C:\Users\DELL\Desktop\New folder\15.jpg" alt="Buta Plus" style="max-width: 100%; height: auto;">
+            <p><strong>Description:</strong> Buta Plus is a specialized combination premix designed to promote growth and enhance overall health in livestock, particularly cattle. Formulated with Butaphosphan and Cyanocobalamin, it supports improved vitality, weight gain, and performance in animals.</p>
+            <p><strong>Each 100ml Contains (Approx):</strong></p>
+            <ul>
+                <li>Butaphosphan</li>
+                <li>Cyanocobalamin</li>
+                <li>Combination Premix</li>
+            </ul>
+            <ul class="key-benefits">
+                <li>Enhances growth and weight gain</li>
+                <li>Boosts vitality and energy levels</li>
+                <li>Supports overall health and performance</li>
+            </ul>
+            <p><strong>Weight:</strong> 500ml</p>
+            <p><strong>Usage:</strong> For veterinary use only</p>
+        </article>
+
+        <article class="product-category" tabindex="0" aria-label="Rumen Zyme Category">
+            <h3>Rumen Zyme – Nutritional and Digestive Stimulant</h3>
+            <img src="C:\Users\DELL\Desktop\New folder\16.jpg" alt="Rumen Zyme" style="max-width: 100%; height: auto;">
+            <p><strong>Description:</strong> Rumen Zyme is a nutritional powder formulated to stimulate rumen function and improve digestion in ruminants. Enriched with essential nutrients, it aids in better feed utilization and maintains optimal gut health.</p>
+            <p><strong>Each 100g Contains (Approx):</strong></p>
+            <ul>
+                <li>Sodium Carbonate: 7500 mg</li>
+                <li>Ginger: 1000 mg</li>
+                <li>Cobalt Sulphate: 1000 mg</li>
+                <li>Dried Ferrous Sulphate: 400 mg</li>
+                <li>Vitamin B12: 10 mg</li>
+                <li>Nux Vomica: 2000 mg</li>
+            </ul>
+            <ul class="key-benefits">
+                <li>Enhances rumen activity and digestion</li>
+                <li>Improves feed efficiency</li>
+                <li>Supports overall gut health</li>
+            </ul>
+            <p><strong>Weight:</strong> 10x20g</p>
+            <p><strong>Usage:</strong> For veterinary use only</p>
+        </article>
+
+    </div>
+</section>
+
+
+
+<!-- Administration Section -->
+<section id="administration" class="container" role="region" aria-labelledby="admin-title" tabindex="-1" style="padding-bottom:3rem;">
+  <h2 id="admin-title" class="section-title">Our Administration & Stuff</h2>
+  <table style="width: 100%; border-collapse: collapse;" aria-label="Company administration team members">
+    <thead>
+      <tr>
+        <th style="border: 1px solid #d7cbb8; padding: 8px; text-align: left;">Serial No.</th>
+        <th style="border: 1px solid #d7cbb8; padding: 8px; text-align: left;">Name</th>
+        <th style="border: 1px solid #d7cbb8; padding: 8px; text-align: left;">Educational Qualification</th>
+        <th style="border: 1px solid #d7cbb8; padding: 8px; text-align: left;">Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">1</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Rajesh Kumar Dey</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">B.Sc in Mechanical Engineering</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Chairman</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">2</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Jhutan Das</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">MBA</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Managing Director</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">3</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Shuly Lata Paul</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Masters in Accounting</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Director and (Accountant)</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">4</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Sangita Rani Dey</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">B.S.S (Degree)</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Director and (Assistant Accountant)</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">5</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Md. Rafiqul Islam</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">DVM PGD</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Chief Advisor Technical and Operation</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">6</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Koushik Roy Munna</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Masters in Science</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Chemist</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">7</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Md. Sharif</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">HSC</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Machine Operator</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">8</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Prashant Das</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">B.B.S (Honors)</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Admin</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">9</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Babul Das</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">SSC</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Production Assistant</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">10</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Joni Das</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">SSC</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Production Assistant</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">11</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Lipi Chandra Das</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">SSC</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Production Assistant</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">12</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Kamal Hossain</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">SSC</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Production Assistant</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">13</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Lakshmi Rani Das</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">SSC</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Production Assistant</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">14</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Tripon Chandra Das</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">SSC</td>
+        <td style="border: 1px solid #d7cbb8; padding: 8px;">Production Assistant</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<!-- Chairman's Speech Section -->
+<section id="chairman-speech" class="container" role="region" aria-labelledby="chairman-speech-title" tabindex="-1" style="padding: 3rem 0;">
+  <h2 id="chairman-speech-title" class="section-title">Message from the Chairman</h2>
+  <blockquote style="border-left: 4px solid #a67c52; padding-left: 1rem; font-style: italic; color: #4e342e; background: #fefbf7; box-shadow: 0 3px 10px rgb(166 124 82 / 0.15); border-radius: 6px;">
+    <p>Dear valued stakeholders,</p>
+    <p>As the Chairman of Success Animal Healthcare Limited, I am proud to lead a team dedicated to improving livestock health and welfare. Our commitment to quality and innovation drives us to provide the best products and services in the industry.</p>
+    <p>We believe that healthy animals lead to healthy communities, and we are here to support farmers and livestock owners in achieving their goals. Together, we can ensure a sustainable future for agriculture.</p>
+    <p>Thank you for your continued trust and support.</p>
+    <p>Sincerely,<br>Rajesh Kumar Dey</p>
+  </blockquote>
+</section>
+
+  <!-- Why Choose Us -->
+  <section id="why-us" class="container" role="region" aria-labelledby="whyus-title" tabindex="-1" style="padding-bottom:3rem;">
+    <h2 id="whyus-title" class="section-title">Why Choose Us</h2>
+    <ul>
+      <li><strong>Quality Control Standards:</strong> Our manufacturing facilities adhere to Good Manufacturing Practice (GMP) standards, ensuring consistent quality and safety in every product batch.</li>
+      <li><strong>Research & Innovation:</strong> Our dedicated R&amp;D team continuously works on developing new formulations and improving existing products to meet evolving livestock health challenges.</li>
+      <li><strong>Trusted Partner:</strong> With years of experience in the animal healthcare industry, we've built lasting relationships with distributors, veterinarians, and farmers across multiple countries.</li>
+      <li><strong>Comprehensive Solutions:</strong> Our diverse product range covers all aspects of animal healthcare, from preventive care to treatment, nutrition, and biosecurity.</li>
+      <li><strong>Technical Support:</strong> Our team of veterinary experts provides technical assistance and training to ensure optimal product usage and results.</li>
+      <li><strong>Competitive Pricing:</strong> We offer high-quality products at competitive prices, ensuring value for money and accessibility for farmers of all scales.</li>
+    </ul>
+    <h3>What Our Clients Say</h3>
+    <blockquote style="max-width:700px; font-style: italic; color:#4e342e; border-left: 4px solid #a67c52; padding-left: 1rem; margin-bottom: 1.5rem;">
+      &quot;Success Animal Healthcare products have significantly improved the health and productivity of our dairy herd. Their technical support team is always available to address our concerns and provide guidance.&quot;<br /><strong>Abdul Rahman<br />Dairy Farm Owner, Dhaka</strong>
+    </blockquote>
+    <blockquote style="max-width:700px; font-style: italic; color:#4e342e; border-left: 4px solid #a67c52; padding-left: 1rem;">
+      &quot;As a poultry farmer, I've tried many products, but Success Animal Healthcare's probiotics and feed supplements have given me the best results. My birds are healthier and the mortality rate has decreased significantly.&quot;<br /><strong>Mohammad Hossain<br />Poultry Farmer, Cumilla</strong>
+    </blockquote>
+  </section>
+
+  <!-- Export & Global Reach -->
+  <section id="export" class="container" role="region" aria-labelledby="export-title" tabindex="-1" style="padding-bottom:3rem;">
+    <h2 id="export-title" class="section-title">Export & Global Reach</h2>
+    <ul>
+      <li><strong>Countries Served:</strong> We proudly export to multiple countries across Asia, Africa, and beyond.</li>
+      <li><strong>Export Capacity & Experience:</strong> Years of expertise handling international shipments with efficiency.</li>
+      <li><strong>Logistics & Documentation Support:</strong> Comprehensive assistance to ensure smooth delivery and compliance.</li>
+    </ul>
+  </section>
+
+  <!-- Insights / Blog (Optional) -->
+  <section id="blog" class="container" role="region" aria-labelledby="blog-title" tabindex="-1" style="padding-bottom:3rem;">
+    <h2 id="blog-title" class="section-title">Insights & Blog</h2>
+    <article tabindex="0">
+      <h3>Tips on Livestock Health Management</h3>
+      <p>Discover best practices to maintain the vitality and wellbeing of your livestock.</p>
+    </article>
+    <article tabindex="0">
+      <h3>How to Use Our Products Effectively</h3>
+      <p>Guidance on optimal product use for maximum livestock benefits.</p>
+    </article>
+    <article tabindex="0">
+      <h3>Success Stories from Our Clients</h3>
+      <p>Real-life experiences showcasing the benefits of our animal healthcare products.</p>
+    </article>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact" class="container" role="region" aria-labelledby="contact-title" tabindex="-1" style="padding-bottom:4rem;">
+    <h2 id="contact-title" class="section-title">Contact Us</h2>
+    <div class="contact-info" tabindex="0">
+      <h3>Our Location</h3>
+      <p>Barkamta Dey Bari, Chandina-3510, Debidwar, Cumilla, Bangladesh</p>
+      <h3>Phone</h3>
+      <p><a href="tel:+8801684154766" aria-label="Call Success Animal Healthcare">01684-154766</a></p>
+      <h3>Email</h3>
+      <p><a href="mailto:successgroupltd2022@gmail.com" aria-label="Email Success Animal Healthcare">successgroupltd2022@gmail.com</a></p>
+    </div>
+    <div id="map" aria-label="Google Map showing company location">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22297.06533835577!2d90.9974594849483!3d23.49630800373219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3754646ccb85e101%3A0x3436431fae3ecf28!2sBarkamta!5e1!3m2!1sen!2sbd!4v1747776237351!5m2!1sen!2sbd"
+        width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Google Map showing Barkamta location"
+      ></iframe>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer role="contentinfo">
+  &copy; 2025 Success Animal Healthcare Limited. All rights reserved. <br> Website developed by <b><i>Gobinda Nag</i></b>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/8801684154766" target="_blank" rel="noopener" id="whatsapp-button" aria-label="Chat on WhatsApp" title="Chat with us on WhatsApp">
+  <svg aria-hidden="true" viewBox="0 0 24 24">
+    <path d="M20.52 3.48A11.88 11.88 0 0012 0C5.372 0 0 5.372 0 12a11.88 11.88 0 002.456 7.521L0 24l4.607-2.413A11.88 11.88 0 0012 24c6.628 0 12-5.372 12-12 0-3.194-1.243-6.201-3.48-8.52zm-8.52 17.958a9.634 9.634 0 01-4.962-1.448l-.355-.21-2.9 1.517 1.545-3.002-.23-.39a9.68 9.68 0 01-1.45-5.276c0-5.385 4.376-9.758 9.775-9.758 2.609 0 5.062 1.016 6.913 2.854a9.792 9.792 0 012.854 6.917c.002 5.4-4.372 9.79-9.758 9.79zm5.312-7.144c-.29-.147-1.713-.84-1.978-.935-.263-.098-.454-.147-.645.148-.19.293-.733.935-.9 1.127-.165.19-.327.214-.607.073-.28-.144-1.18-.434-2.25-1.392-.832-.743-1.393-1.66-1.555-1.95-.16-.292-.017-.449.128-.593.131-.13.292-.341.438-.512.15-.173.2-.292.3-.486.1-.19.05-.354-.025-.498-.075-.144-.645-1.553-.883-2.13-.232-.555-.468-.48-.645-.49l-.555-.01c-.19 0-.5.07-.763.35s-1.003.983-1.003 2.398 1.027 2.784 1.17 2.976c.14.193 2.02 3.082 4.898 4.32.684.295 1.217.47 1.634.602.686.22 1.31.19 1.805.115.551-.084 1.713-.7 1.955-1.38.244-.685.244-1.27.17-1.38-.07-.105-.26-.168-.555-.292z" />
+  </svg>
+</a>
+
+<script>
+  // Smooth scroll for internal anchor links + update active nav link
+  document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      const targetID = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetID);
+      if(targetSection){
+        targetSection.scrollIntoView({behavior: 'smooth', block: 'start'});
+        document.querySelectorAll('nav ul li a').forEach(el => el.classList.remove
