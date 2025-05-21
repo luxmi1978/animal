@@ -402,44 +402,160 @@
 
 <main>
 
-<!-- Home Section -->
-<section id="home" class="hero" role="region" aria-label="Homepage Hero Section" style="background-color: #1a1a1a; padding: 2rem;">
-  <div class="hero-content" style="max-width: 800px; margin: auto; text-align: center;">
-    <h1 tabindex="0" style="font-size: 2.5rem; color: #ffffff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); margin-bottom: 1rem;">
-      Empowering Livestock Health Worldwide
-    </h1>
-    <p tabindex="0" style="font-size: 1.2rem; color: #ffffff; line-height: 1.5; margin-bottom: 2rem;">
+<section id="home" class="hero" role="region" aria-label="Homepage Hero Section">
+  <style>
+    .hero {
+      background-color: #1a1a1a;
+      padding: 2rem 1rem;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-content {
+      max-width: 800px;
+      width: 90%;
+      margin: auto;
+      text-align: center;
+    }
+    .hero-content h1 {
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      color: #ffffff;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+      margin-bottom: 1rem;
+    }
+    .hero-content p {
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      color: #ffffff;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+    .btn-group {
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      background-color: #2980b9;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+    .btn.distributor {
+      background-color: #27ae60;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+    .contact-info {
+      font-weight: 600;
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
+      color: #ffffff;
+      margin-top: 1.8rem;
+    }
+    .contact-info a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    .quick-categories {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .category-card {
+      background: #333;
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      cursor: default;
+      width: 120px;
+      text-align: center;
+    }
+    .category-icon {
+      font-size: 2rem;
+    }
+    .category-label {
+      margin-top: 0.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 1.5rem 0.5rem;
+        min-height: auto;
+      }
+      .hero-content h1 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+      }
+      .hero-content p {
+        font-size: clamp(0.9rem, 4vw, 1rem);
+      }
+      .btn-group {
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn {
+        width: 100%;
+        max-width: 200px;
+        padding: 0.5rem 1rem;
+      }
+      .quick-categories {
+        gap: 0.5rem;
+      }
+      .category-card {
+        width: 100px;
+        padding: 0.75rem;
+      }
+      .category-icon {
+        font-size: 1.5rem;
+      }
+      .category-label {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+  <div class="hero-content">
+    <h1 tabindex="0">Empowering Livestock Health Worldwide</h1>
+    <p tabindex="0">
       Success Animal Healthcare Limited is a trusted manufacturer and global exporter of top-quality animal healthcare products based in Bangladesh. Enhancing livestock health for a better tomorrow.
     </p>
-    <div class="btn-group" style="margin-bottom: 2rem;">
-      <a href="#products" class="btn" role="button" tabindex="0" style="background-color: #2980b9; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; margin-right: 1rem;">View Products</a>
-      <a href="#contact" class="btn" role="button" tabindex="0" style="background-color: #27ae60; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none;">Become a Distributor</a>
+    <div class="btn-group">
+      <a href="#products" class="btn" role="button" tabindex="0">View Products</a>
+      <a href="#contact" class="btn distributor" role="button" tabindex="0">Become a Distributor</a>
     </div>
-    <div style="margin-top: 1.8rem; font-weight: 600; font-size: 1rem; color: #ffffff;">
+    <div class="contact-info">
       <div>📞 01684-154766</div>
-      <div>✉️ <a href="mailto:successgroupltd2022@gmail.com" aria-label="Send Email to Success Animal Healthcare" style="color: #ffffff; text-decoration: underline;">successgroupltd2022@gmail.com</a></div>
+      <div>✉️ <a href="mailto:successgroupltd2022@gmail.com" aria-label="Send Email to Success Animal Healthcare">successgroupltd2022@gmail.com</a></div>
     </div>
-    <div class="quick-categories" aria-label="Quick product category highlights" style="display: flex; justify-content: center; gap: 1rem; margin-top: 2rem;">
-      <div class="category-card" tabindex="0" style="background: #333; color: white; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); cursor: default;">
-        <div class="category-icon" aria-hidden="true" style="font-size: 2rem;">🌿</div>
-        <div class="category-label" style="margin-top: 0.5rem; font-weight: 600;">Feed Supplements</div>
+    <div class="quick-categories" aria-label="Quick product category highlights">
+      <div class="category-card" tabindex="0">
+        <div class="category-icon" aria-hidden="true">🌿</div>
+        <div class="category-label">Feed Supplements</div>
       </div>
-      <div class="category-card" tabindex="0" style="background: #333; color: white; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); cursor: default;">
-        <div class="category-icon" aria-hidden="true" style="font-size: 2rem;">💉</div>
-        <div class="category-label" style="margin-top: 0.5rem; font-weight: 600;">Injections</div>
+      <div class="category-card" tabindex="0">
+        <div class="category-icon" aria-hidden="true">💉</div>
+        <div class="category-label">Injections</div>
       </div>
-      <div class="category-card" tabindex="0" style="background: #333; color: white; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); cursor: default;">
-        <div class="category-icon" aria-hidden="true" style="font-size: 2rem;">🧴</div>
-        <div class="category-label" style="margin-top: 0.5rem; font-weight: 600;">Disinfectants</div>
+      <div class="category-card" tabindex="0">
+        <div class="category-icon" aria-hidden="true">🧴</div>
+        <div class="category-label">Disinfectants</div>
       </div>
-      <div class="category-card" tabindex="0" style="background: #333; color: white; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.25); cursor: default;">
-        <div class="category-icon" aria-hidden="true" style="font-size: 2rem;">🐛</div>
-        <div class="category-label" style="margin-top: 0.5rem; font-weight: 600;">Dewormers</div>
+      <div class="category-card" tabindex="0">
+        <div class="category-icon" aria-hidden="true">🐛</div>
+        <div class="category-label">Dewormers</div>
       </div>
     </div>
   </div>
 </section>
-
 
   <!-- About Us Section -->
   <section id="about-us" class="container" role="region" aria-labelledby="aboutus-title" tabindex="-1" style="padding-top:3rem; padding-bottom:3rem;">
