@@ -879,16 +879,45 @@
 </a>
 
 <script>
-  // Smooth scroll for internal anchor links + update active nav link
+  // Smooth scroll for navigation links
   document.querySelectorAll('nav ul li a').forEach(link => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
       const targetID = this.getAttribute('href').substring(1);
       const targetSection = document.getElementById(targetID);
       if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - headerHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
         document.querySelectorAll('nav ul li a').forEach(el => el.classList.remove('active'));
         this.classList.add('active');
+      }
+    });
+  });
+
+  // Smooth scroll for hero section buttons
+  document.querySelectorAll('.hero .btn-group a.btn').forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetID = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetID);
+      if (targetSection) {
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - headerHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+        // Update active nav link to match button destination
+        document.querySelectorAll('nav ul li a').forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href').substring(1) === targetID) {
+            link.classList.add('active');
+          }
+        });
       }
     });
   });
@@ -897,10 +926,11 @@
   window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav ul li a');
+    const headerHeight = document.querySelector('header').offsetHeight;
     let currentSection = '';
 
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 70; // Adjust for header height
+      const sectionTop = section.offsetTop - headerHeight;
       const sectionHeight = section.clientHeight;
       if (window.scrollY >= sectionTop - sectionHeight / 3) {
         currentSection = section.getAttribute('id');
@@ -915,3 +945,4 @@
     });
   });
 </script>
+
